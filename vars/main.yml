@@ -1,0 +1,33 @@
+---
+# vars file for molecule-rpc-openstack-post-deploy
+ops_apt_util_packages:
+  - bash-completion
+  - bridge-utils
+  - curl
+  - dstat
+  - htop
+  - iotop
+  - iptables-persistent
+  - lsof
+  - openssh-server
+  - sudo
+  - tcpdump
+  - vim
+  - screen
+ops_apt_host_packages:
+  - linux-crashdump
+  - debootstrap
+  - lvm2
+  - ntp
+  - ntpdate
+  - vlan
+image:
+  name: Ubuntu 16.04
+flavor:
+  name: post-deploy
+test_server: post-deploy-server
+test_volume: post-deploy-volume
+test_router: TEST-ROUTER
+test_network: TEST-VXLAN
+test_subnet: TEST-VXLAN-SUBNET
+gateway_network: GATEWAY_NET
